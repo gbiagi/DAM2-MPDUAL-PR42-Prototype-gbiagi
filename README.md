@@ -1,24 +1,3 @@
-# Exemple de Singleton #
+# DAM2 Pr 4.2
 
-En aquest projecte hi ha un exemple de Singleton a Java
-
-### Compilació i funcionament ###
-
-A Linux i OSX:
-
-```
-./compile.sh
-```
-
-A Windows Powershell:
-
-```
-.\compile.bat
-```
-
-Or, from Visual Studio Code:
-
-```
-"Terminal > Run task > Compile Project"
-
-```
+Autor: - [G. Biagi](https://www.github.com/gbiagi)
