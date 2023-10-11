@@ -1,11 +1,11 @@
 import java.util.Objects;
 
 public abstract class Electrodomestic {
-    private String nom;
-    private String color;
-    private int preu;
-    private String marca;
-    private int eficiencia;
+    public String nom;
+    public String color;
+    public int preu;
+    public String marca;
+    public int eficiencia;
 
     public Electrodomestic() {}
     public Electrodomestic(Electrodomestic target) {
@@ -23,12 +23,10 @@ public abstract class Electrodomestic {
     public boolean equals (Object object2) {
         if (!(object2 instanceof Electrodomestic)) return false;
         Electrodomestic cast2 = (Electrodomestic) object2;
-        return
-                Objects.equals(cast2.nom, nom) &&
+        return (Objects.equals(cast2.nom, nom) &&
                 Objects.equals(cast2.color, color) &&
                 cast2.preu == preu &&
                 Objects.equals(cast2.marca, marca) &&
-                cast2.eficiencia == eficiencia;
-
+                cast2.eficiencia == eficiencia);
     }
 }

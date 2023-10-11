@@ -1,16 +1,30 @@
 public class Nevera extends Electrodomestic{
-    private int frigories;
-    private int soroll;
-
+    public  int frigories;
+    public  int soroll;
     public Nevera() {}
-    public Nevera(String nom, String color, int preu, String marca, int eficiencia, int frigories, int soroll) {
-        super(nom, color, preu, marca, eficiencia);
-        this.frigories = frigories;
-        this.soroll = soroll;
+    public Nevera(Nevera target) {
+        super(target);
+        if (target != null) {
+            this.frigories = target.frigories;
+            this.soroll = target.soroll;
+        }
     }
     @Override
     public Electrodomestic clone() {
-        return new Nevera();
+        return new Nevera(this);
+    }
+    @Override
+    public boolean equals(Object object2) {
+        // Comprova si son la mateixa referencia
+        if (this == object2) return true;
+        if (!(object2 instanceof Electrodomestic) || !super.equals(object2)) return false;
+        // Comprova si son de la mateixa classe
+        if (!this.getClass().equals(object2.getClass())) return false;
+
+        Nevera cast2 = (Nevera) object2;
+        return (cast2.frigories == frigories &&
+                cast2.soroll == soroll);
     }
 }
+
 
